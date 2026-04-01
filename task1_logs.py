@@ -8,7 +8,6 @@ logs = [
     "192.168.1.2 2023-10-01 10:20:00 200"
 ]
 
-# 1. Создаем список IP-адресов
 ip_list = []
 status_counts = {'200': 0, '404': 0, '500': 0}
 
@@ -21,10 +20,8 @@ for log in logs:
     if status in status_counts:
         status_counts[status] += 1
 
-# 2. Уникальные IP-адреса
 unique_ips = list(set(ip_list))
 
-# Вывод результатов
 print("=" * 50)
 print("ЗАДАНИЕ 1: Логи посещения")
 print("=" * 50)
